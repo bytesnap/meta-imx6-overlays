@@ -1,0 +1,11 @@
+This meta-layer collects the patches necessary to make the overlays work with
+the i.MX6 family of chips.
+The version of the Linux Kernel targetted by these patches is 4.1.15, but the
+same patches may apply on top of other versions.
+
+To add support to overlays on your design, just include file:
+recipes-kernel/linux/overlays.inc
+from your kernel recipe.
+
+If you also want to add the expansion manager to your system, make sure you
+add "expansion-manager" to the list of packages to install in the final image
